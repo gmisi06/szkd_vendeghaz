@@ -15,5 +15,6 @@ class Reservation extends Model
         'arrival',
         'leave',
         'comment',
+        'status',
     ];
 }

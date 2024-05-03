@@ -15,10 +15,10 @@
         <div class="ml-5">{{ $reservation -> countOfPersons }}</div>
         
         <label class="pt-5  text-lg font-semibold " for="arrival">Érkezés</label>
-        <div class="ml-5">{{ $reservation -> arrival }}</div>
+        <div class="ml-5">{{ \Carbon\Carbon::parse($reservation->arrival)->format('Y. m. d.') }}</div>
         
         <label class="pt-5  text-lg font-semibold " for="leave">Távozás</label>
-        <div class="ml-5">{{ $reservation -> leave }}</div>
+        <div class="ml-5">{{ \Carbon\Carbon::parse($reservation->leave)->format('Y. m. d.') }}</div>
         
         <label class="pt-5  text-lg font-semibold " for="comment">Megjegyzés <span class="text-slate-500 font-normal italic">(opcionális)</span></label>
         <div class="ml-5">@if( $reservation -> comment === null) Nincs megjegyzés... @else {{ $reservation -> comment }} @endif</div> 

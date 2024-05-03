@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('leave');
             $table->string('comment')->nullable();
             $table->boolean('new')->default('true');
+            $table->boolean('status')->nullable();
         });
     }
 

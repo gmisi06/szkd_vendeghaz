@@ -18,14 +18,14 @@
             <div class="flex justify-around items-center w-3/6 mx-auto text-white font-semibold text-2xl tracking-wider" style="text-shadow: 2px 1.5px 1.5px #000 ">
                     <a href="{{route('home')}}" class="hover:text-slate-300">Főoldal</a>
                     <a href="{{route('gallery')}}" class="hover:text-slate-300">Galéria</a>
+                    <a href="{{route('information')}}" class="hover:text-slate-300">Elérhetőség</a>
                     <a href="{{route('reservation.create')}}" class="hover:text-slate-300">Foglalás</a>
-                    <a href="" class="hover:text-slate-300">Elérhetőség</a>
             </div>
             
             @auth
                 <div class="rounded-3xl flex absolute items-center right-0 gap-6 px-4 mr-2 h-5/6 bg-white text-black font-semibold text-xl tracking-wider" style="box-shadow: inset 0 0 5px #000;">
-                    <a href="{{route('reservation.index')}}">Foglalások</a>
-                    <form class="" action="{{ route('logout') }}" method="POST">
+                    <a class="hover:text-slate-700" href="{{route('reservation.index')}}">Foglalások</a>
+                    <form class="hover:text-slate-700" action="{{ route('logout') }}" method="POST">
                         @csrf
 
                         <button>Kilépés</button>
